@@ -1,11 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, SafeAreaView, StyleSheet, View } from 'react-native';
+import music_data from './src/music-data.json';
+import SongCard from './src/components/SongCard';
+import SearchInput from './src/SearchInput/SearchInput';
 
-export default function App() {
+export default function App() { 
+  const renderSong = ({item}) => <SongCard song={item}/>
+  const renderSeperator = () => <View style={styles.seperator} />
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <SearchInput />
+      <View style={styles.container}>
+        <FlatList 
+        keyExtractor={item => item.id}
+        data={music_data}
+        renderItem={renderSong}
+        ItemSeparatorComponent={renderSeperator}
+        />   
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -13,7 +26,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  seperator : {
+    borderWidth :1 ,
+    borderColor: '#eceff1'
+  }
 });
