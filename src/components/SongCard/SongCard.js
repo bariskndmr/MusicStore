@@ -17,7 +17,10 @@ export default SongCard = props => {
                                 <Text style={styles.soldoutText}>TÜKENDİ</Text>
                             </View>}
                         </View>
-                    </View>
+                        <View style={styles.albumContaniner}>
+                            <Text style={styles.albumContainerText}>Albüm</Text>
+                        </View>
+                </View>
         </View>
     );
 }

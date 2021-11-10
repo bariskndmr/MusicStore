@@ -34,7 +34,7 @@ export default StyleSheet.create({
     },
     
     artist : {
-        
+        paddingVertical : 3,
     },
 
     year : {
@@ -46,12 +46,25 @@ export default StyleSheet.create({
     soldoutContainer : {
         borderWidth : 1,
         borderColor: 'red',
-        padding: 5,
+        padding: 3,
         borderRadius: 5,
     },
 
     soldoutText : {
         color: 'red',
         fontSize: 12,
+    },
+
+    albumContaniner : {
+        borderWidth : 1,
+        borderRadius : 5,
+        padding: 2,
+        borderColor : 'green',
+        width: 50,
+    },
+
+    albumContainerText : {
+        fontWeight : '500',
+        color: 'green'
     },
 });
