@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, TextInput } from 'react-native';
-export default SearchInput = () => {
+export default SearchBar = () => {
     return (
 
         <TextInput style={styles.input}
