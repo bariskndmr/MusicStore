@@ -1,5 +1,5 @@
 # MusicStore
-Music App for React-Native lesson at [Patika](https://app.patika.dev)
+Music App for React-Native lesson on [Patika](https://app.patika.dev)
 
 Here images of Application
 
